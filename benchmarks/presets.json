@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "presets": {
+    "smoke": {
+      "description": "Quick correctness, not a performance ranking.",
+      "inputs": [
+        "samples/smoke.zip"
+      ],
+      "invalid_inputs": [
+        "samples/invalid-path.zip",
+        "samples/invalid-record.zip",
+        "samples/invalid-empty.zip",
+        "samples/invalid-duplicate-record.zip",
+        "samples/invalid-malformed-json.zip",
+        "samples/invalid-duplicate-file.zip",
+        "samples/invalid-windows-drive-path.zip",
+        "samples/invalid-windows-unc-path.zip",
+        "samples/invalid-nested-path.zip",
+        "samples/invalid-directory-entry.zip"
+      ],
+      "deadline_seconds": 120
+    },
+    "sustained": {
+      "description": "Main performance profile with real-duration expensive calls.",
+      "inputs": [
+        "samples/sustained.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 900
+    },
+    "sustained-large": {
+      "description": "Optional longer sustained run.",
+      "inputs": [
+        "samples/sustained-large.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 3600
+    },
+    "single-file": {
+      "description": "500 records in one file.",
+      "inputs": [
+        "samples/single-file.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 900
+    },
+    "long-tail": {
+      "description": "Long-running stragglers mixed with short calls.",
+      "inputs": [
+        "samples/long-tail.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 1200
+    },
+    "burst": {
+      "description": "10,000 short calls.",
+      "inputs": [
+        "samples/burst-10000.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 600
+    },
+    "stress-100k": {
+      "description": "Optional 100,000-record stress test; not a quick check.",
+      "inputs": [
+        "samples/burst-100000.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 3600
+    },
+    "many-files": {
+      "description": "1,000 separate file tasks.",
+      "inputs": [
+        "samples/many-files.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 300
+    },
+    "uneven-files": {
+      "description": "Strongly uneven file-level work.",
+      "inputs": [
+        "samples/uneven-files.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 900
+    },
+    "timeouts": {
+      "description": "Quick exhausted deadline check.",
+      "inputs": [
+        "samples/timeouts.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 180
+    },
+    "timeout-heavy": {
+      "description": "Longer attempts with impossible and borderline deadlines.",
+      "inputs": [
+        "samples/timeout-heavy.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 900
+    },
+    "attempt-mix": {
+      "description": "Different max_attempts budgets from 1 to 5.",
+      "inputs": [
+        "samples/attempt-mix.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 600
+    },
+    "edge-cases": {
+      "description": "Single record plus CRLF/Unicode/no-final-newline input.",
+      "inputs": [
+        "samples/single-record.zip",
+        "samples/text-edge-cases.zip"
+      ],
+      "invalid_inputs": [
+        "samples/invalid-path.zip",
+        "samples/invalid-record.zip",
+        "samples/invalid-empty.zip",
+        "samples/invalid-duplicate-record.zip",
+        "samples/invalid-malformed-json.zip",
+        "samples/invalid-duplicate-file.zip",
+        "samples/invalid-windows-drive-path.zip",
+        "samples/invalid-windows-unc-path.zip",
+        "samples/invalid-nested-path.zip",
+        "samples/invalid-directory-entry.zip"
+      ],
+      "deadline_seconds": 120
+    },
+    "overlapping": {
+      "description": "Large, small and tiny jobs submitted without waiting for completion.",
+      "inputs": [
+        "samples/sustained.zip",
+        "samples/small-job.zip",
+        "samples/tiny-job.zip"
+      ],
+      "invalid_inputs": [],
+      "deadline_seconds": 1200
+    }
+  }
+}

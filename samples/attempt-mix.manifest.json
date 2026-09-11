@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "profile": "attempt-mix",
+  "workload_seed": 504,
+  "files": 6,
+  "records": 240,
+  "records_per_file": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+  ],
+  "base_work_ms": 249234,
+  "nominal_first_attempt_budget_ms": 220987,
+  "work_ms": {
+    "min": 200,
+    "median": 1053,
+    "p95": 1734,
+    "max": 1784
+  },
+  "nominal_work_divided_by_20_seconds": 12.462,
+  "timing_note": "Descriptive arithmetic, NOT a measured runtime or a strict lower bound. Ignores jitter, retries, deadline cutoffs, dispatch, ingestion and finalization. Actual capacity may differ from 20. work_ms is real milliseconds."
+}

@@ -1,0 +1,3 @@
+{"record_id":"record-000001","payload":{"text":"Batch 1, source record 1","category":"gamma"},"work_ms":28,"timeout_ms":156,"max_attempts":3}
+{"record_id":"record-000002","payload":{"text":"Batch 1, source record 2","category":"alpha"},"work_ms":53,"timeout_ms":206,"max_attempts":3}
+{"record_id":"record-000003","payload":{"text":"Batch 1, source record 3","category":"alpha"},"work_ms":94,"timeout_ms":288,"max_attempts":3}

@@ -1,0 +1,15 @@
+{
+  "run_id": "manual-check",
+  "job_id": "manual-job",
+  "task_id": "source.jsonl",
+  "attempt": 1,
+  "record": {
+    "record_id": "row-001",
+    "payload": {
+      "text": "Example export record"
+    },
+    "work_ms": 2000,
+    "timeout_ms": 5000,
+    "max_attempts": 3
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "profile": "sustained",
+  "workload_seed": 214,
+  "files": 1,
+  "records": 500,
+  "records_per_file": [
+    500
+  ],
+  "base_work_ms": 1116937,
+  "nominal_first_attempt_budget_ms": 1116937,
+  "work_ms": {
+    "min": 400,
+    "median": 1162,
+    "p95": 7179,
+    "max": 29066
+  },
+  "nominal_work_divided_by_20_seconds": 55.847,
+  "timing_note": "Descriptive arithmetic, NOT a measured runtime or a strict lower bound. Ignores jitter, retries, deadline cutoffs, dispatch, ingestion and finalization. Actual capacity may differ from 20. work_ms is real milliseconds."
+}
